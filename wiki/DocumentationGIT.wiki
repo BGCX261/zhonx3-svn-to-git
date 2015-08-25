@@ -1,0 +1,129 @@
+#summary Documentation GIT.
+
+= Introduction= 
+
+Documentation d'utilisation de GIT.
+
+= Détails =
+installation
+<code language=bash>
+sudo apt-get install git-all gitg easygit
+</code>
+Configuration initiale de GIT : 
+
+<code language=bash>
+git config --global user.name "Votre nom complet"
+git config --global user.email votre_email@example.com
+</code>
+
+Créer un dépôt GIT : 
+
+<code language=bash>
+mkdir repo_name-git
+cd repo_name-git
+</code>
+
+=>Organiser le repo_git.
+
+Initialiser le dépôt GIT : 
+
+<code language=bash>
+git init .
+git add *
+</code>
+
+=>Créer un repo_git sur votre googlecode.
+
+Ajouter une branche distante sur le dépôt GIT : 
+
+<code language=bash>
+git remote add origin uri_remote_repo_git
+</code>
+
+=>Travailler sur le repo_git.
+
+Faire un "commit" de son travail : 
+
+<code language=bash>
+git commit -a -s
+</code>
+
+=>Mettre un changelog complet.
+
+Pousser son code : 
+
+<code language=bash>
+git push origin
+</code>
+
+=>Et votre travail est accessible pour les autres et versionné.
+
+Récupérer ou cloner un dépôt GIT :
+
+<code language=bash>
+git clone uri_repo_git 
+</code>
+
+la première fois
+
+Ensuite un simple pour le mettre à jour :
+
+<code language=bash>
+git pull
+</code>
+
+Reprendre à "Travailler sur le repo_git" pour participer après un clonage.
+
+Ajouter un fichier au repo_git : 
+
+<code language=bash>
+git add /path/to/file
+</code>
+
+Regarder les changements non commis dans repo_git : 
+
+<code language=bash>
+git diff
+</code>
+
+Créer une nouvelle branche : 
+
+<code language=bash>
+git checkout -b branch_name
+</code>
+
+Changer de branche : 
+
+<code language=bash>
+git checkout branch_name
+</code>
+
+Consulter la liste des changements : 
+
+<code language=bash>
+git log
+</code>
+
+Mettre dans le grenier les changements non commis : 
+
+<code language=bash>
+git stash
+</code>
+
+et les ré-appliquer :
+
+<code language=bash>
+git stash apply
+</code>
+
+Fusionner une branche : 
+
+<code language=bash>
+git merge branch_name
+</code>
+
+Gérer un conflit avec un outil de fusion à 3 directions : 
+
+<code language=bash>
+git mergetool
+</code>
